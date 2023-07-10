@@ -127,16 +127,13 @@ export default function Home() {
 
   useEffect(() => {
     const checkIsDesktop = () => {
-      setIsDesktop(window.innerWidth >= 976);
+      setIsDesktop(window.innerWidth >= 1440);
     };
 
-    // Check on initial load
     checkIsDesktop();
 
-    // Add event listener for window resize
     window.addEventListener("resize", checkIsDesktop);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", checkIsDesktop);
     };
@@ -146,8 +143,8 @@ export default function Home() {
     return (
       <div>
         <p className="text-white border flex items-center justify-center h-screen p-6">
-          Please switch to a desktop computer to view this site. Didn't have
-          time to make it responsive. Sorry!
+          Please switch to a desktop computer. This site is best viewed on a
+          desktop computer.
         </p>
       </div>
     );
