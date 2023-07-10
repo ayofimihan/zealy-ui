@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -10,13 +11,15 @@ const Navbar = () => {
         </div>
         <div className="md:flex space-x-4 text-white ml-5 text-sm font-semibold hidden">
           <div className="mt-3 text-xs font-light">
-            <a href="/" className="hover:text-darkGrey">Create a Community</a>
+            <Link href="/" className="hover:text-darkGrey">
+              Create a Community
+            </Link>
           </div>
           <div className="glass-button-dark-bg">
-            <a href="/">Login</a>
+            <Link href="/">Login</Link>
           </div>
           <div className="glass-button-white-bg bg-white text-black">
-            <a href="/">Create an Account</a>
+            <Link href="/">Create an Account</Link>
           </div>
         </div>
       </div>
