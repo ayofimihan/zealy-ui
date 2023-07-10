@@ -1,9 +1,11 @@
 html,
 body {
-  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
 }
 
 a {
@@ -13,6 +15,132 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* styles/globals.css */
+
+/* Custom styles for the navbar */
+.nav-button {
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  transition: opacity 0.2s;
+}
+
+/* Hover effect for buttons */
+.nav-button:hover {
+  opacity: 0.8;
+}
+
+.glass-button-dark-bg {
+  display: inline-block;
+  padding: 10px 10px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.1); /* Darken the background color */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Change the border color */
+  backdrop-filter: blur(
+    10px
+  ); /* Reduce blur to make it more visible on dark backgrounds */
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 8px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.glass-button-white-bg {
+  display: inline-block;
+  padding: 10px 10px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: white; /* Darken the background color */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Change the border color */
+  backdrop-filter: blur(
+    10px
+  ); /* Reduce blur to make it more visible on dark backgrounds */
+  color: black;
+  font-size: 8px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Hover effect for buttons on white backgrounds */
+.glass-button-white-bg:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Increase the alpha value to make it lighter */
+}
+
+/* Hover effect for buttons on dark backgrounds */
+.glass-button-dark-bg:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Change the hover background color */
+}
+
+/*address text*/
+.address {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fcards {
+  transition: transform 0.1s ease;
+}
+
+.fcards:hover {
+  transform: scale(0.99);
+}
+
+.scrollable-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  height: 300px; /* Set the height as you desire */
+}
+
+.smallbtn-grey-background {
+  background-color: #474545;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+#desktop-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(149, 8, 8, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+#desktop-message p {
+  font-size: 24px;
+  margin-top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (prefers-color-scheme: dark) {
